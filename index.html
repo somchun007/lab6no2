@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function addfunc(){
+            var text1 = parseInt(document.getElementById("num1").value);
+            var text2 = parseInt(document.getElementById("num2").value);
+            var oper = document.getElementById("cals").value;
+            
+            if(oper == "add"){
+                document.getElementById("ans").value = text1+text2;
+            }
+            else if(oper == "subtract"){
+                document.getElementById("ans").value = text1-text2;
+            }
+            else if(oper == "multiply"){
+                document.getElementById("ans").value = text1*text2;
+            }
+            else{
+                document.getElementById("ans").value = text1/text2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <p>
+            <input type="text" id="num1" size="8">
+            <select id="cals">
+                <option value="add" >+</option>
+                <option value="subtract" >-</option>
+                <option value="multiply" >*</option>
+                <option value="divide" >/</option>
+            </select>
+            <input type="text" id="num2" size="8"> = 
+            <input type="text" id="ans" size="8" readonly>
+            <input type="button" value="Compute" onclick="addfunc()">
+
+        </p>
+    </form>
+</body>
+</html>
